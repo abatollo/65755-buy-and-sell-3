@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npm run eslint",
     "eslint": "eslint --ext .js src/",
-    "start": "node ./src/service/service.js",
-    "start-front-server": "node ./src/express/express.js"
+    "start": "nodemon ./src/service/service.js",
+    "start-front-server": "nodemon ./src/express/express.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,9 @@
   },
   "homepage": "https://github.com/abatollo/65755-buy-and-sell-3#readme",
   "devDependencies": {
-    "eslint": "8.50.0",
-    "eslint-config-htmlacademy": "10.0.1"
+    "eslint": "8.51.0",
+    "eslint-config-htmlacademy": "10.0.1",
+    "nodemon": "3.0.1"
   },
   "dependencies": {
     "chalk": "5.3.0",
