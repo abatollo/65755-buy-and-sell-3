@@ -50,7 +50,9 @@ offersRouter.post(`/add`,
 
       // в `body` содержатся текстовые данные формы
       // в `file` — данные о сохранённом файле
+
       const {body, file} = req;
+
       const offerData = {
         picture: file ? file.filename : ``,
         sum: body.price,
@@ -59,8 +61,6 @@ offersRouter.post(`/add`,
         title: body[`ticket-name`],
         category: ensureArray(body.category),
       };
-
-      console.log(offerData);
 
       try {
         await api.createOffer(offerData);
